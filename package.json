@@ -4,7 +4,8 @@
   "description": "A template for a reactjs application using typescript",
   "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && webpack",
+    "test": "npm run build && lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,21 @@
   "bugs": {
     "url": "https://github.com/Polynomdivision/react-ts-template/issues"
   },
-  "homepage": "https://github.com/Polynomdivision/react-ts-template#readme"
+  "homepage": "https://github.com/Polynomdivision/react-ts-template#readme",
+
+  "dependencies": {
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2",
+
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "@types/react": "^0.14.39",
+    "@types/react-dom": "^0.14.17",
+
+    "ts-loader": "^0.9.0",
+    "source-map-loader": "^0.1.5"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
 }
